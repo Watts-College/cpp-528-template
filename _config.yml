@@ -53,16 +53,16 @@ header:
 
 # GITHUB CONFIGURATIONS 
 
-url :               "https://ds4ps.github.io"
-baseurl:            "/cpp-528-spr-2021" # update this
-course_url:         "http://ds4ps.org/cpp-528-spr-2021/" # update this
-title:              DS4PS # don't change this
+url :               "https://watts-college.github.io"
+baseurl:            "/cpp-528-template" # update this
+course_url:         "http://watts-college.github.io/cpp-528-template/" # update this
+title:              Watts-College # don't change this
 
 github_info:
-    username:          DS4PS # Github location of the course
+    username:          watts-college # Github location of the course
     branch:            main
-    website-repo:      cpp-528-spr-2021 # update this
-    course-repo:       cpp-528-spr-2021 # update this
+    website-repo:      cpp-528-template # update this
+    course-repo:       cpp-528-template # update this
 
 
 
