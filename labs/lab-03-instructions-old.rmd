@@ -73,12 +73,7 @@ This week you will create a new variable in your dataset that allows you to oper
 
 Provide an explanation and justification of the way you measure gentrification in the data. 
 
-Check out the following articles for some ideas:
-
-- **[Urban Displacement Project's Methodology for Austin, Texas, USA](../articles/gentrification/udp-gentrification-methodology-austin.pdf)**
-- **[Urban Displacement Project's Methodology for San Francisco Bay Area, California, USA](../articles/gentrification/udp-gentrification-methodology-sf.pdf)**
-- **[National Neighborhood Indicators Partnership's Guide to Measuring Neighborhood Change](../articles/gentrification/guide_to_measuring_neighborhood_change_to_understand_and_prevent_displacement.pdf)**
-
+Check out the Urban Displacement Project's [METHODOLOGY](https://www.urbandisplacement.org/sites/default/files/images/udp_methodology_for_ny_-_jan_2019.pdf) for some ideas. 
 
 ## Part 03 - Spatial Patterns
 
