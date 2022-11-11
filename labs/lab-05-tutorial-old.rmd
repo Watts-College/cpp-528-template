@@ -16,6 +16,7 @@ output:
 ```{r setup, include=FALSE}
 # set global RMD options
 knitr::opts_chunk$set( echo=TRUE, message=F, warning=F, eval=T, fig.width=10 )
+
 # set random number generator
 set.seed( 1234 )
 ```
@@ -24,8 +25,6 @@ set.seed( 1234 )
 
 This last step in your project will walk you through adding data from two federal programs designed to help low-income communities.
 
-_**Note, to follow this tutorial, you will need to download the [lab_05_source.R file](lab_05_source.R). This source file will automatically download the data sources.**_
-
 
 **About the NMTC Program**
 
@@ -33,14 +32,14 @@ The NMTC Program enables economically distressed communities to leverage private
 
 Through the first 15 application rounds of the NMTC Program, the CDFI Fund has made 1,178 awards, allocating a total of $57.5 billion in tax credit authority to CDEs through a competitive application process. 
 
-[data download website](https://github.com/DS4PS/cpp-528-spr-2020/blob/master/labs/data/raw/NMTC/nmtc-sheet-01.csv)
+[data download website](https://www.cdfifund.gov/news-events/news/Pages/news-detail.aspx?NewsID=364&Category=Press%20Releases)
 
 
 **About the LIHTC Program**
 
-The [Low-Income Housing Tax Credit (LIHTC)](https://lihtc.huduser.gov/) is the most important resource for creating affordable housing in the United States today. The LIHTC database, created by HUD and available to the public since 1997, contains information on 47,511 projects and 3.13 million housing units placed in service between 1987 and 2017.
+The Low-Income Housing Tax Credit (LIHTC) is the most important resource for creating affordable housing in the United States today. The LIHTC database, created by HUD and available to the public since 1997, contains information on 47,511 projects and 3.13 million housing units placed in service between 1987 and 2017.
 
-[data download website](https://github.com/DS4PS/cpp-528-spr-2020/blob/master/labs/data/raw/LIHTC/LIHTCPUB.csv)
+[data download website](https://lihtc.huduser.gov/)
 
 
 
@@ -137,14 +136,17 @@ Note that outliers often represent a small proportion of cases but can account f
 
 ```{r, echo = FALSE}
 us.median <- paste0( "$", round( median( df$MedianHomeValue2000/1000, na.rm=T ), 0 ), "k" )
+
 hist( df$MedianHomeValue2000, breaks=200, xlim=c(0,500000), 
       col="gray20", border="white",
       axes=F, 
       xlab=paste0( "MHV (median = ", us.median, ")" ),
       ylab="",
       main="Median Home Value in 2000 (2010 US dollars)" )
+
 axis( side=1, at=seq(0,500000,100000), 
       labels=c("$0","$100k","$200k","$300k","$400k","$500k") )
+
 abline( v=median( df$MedianHomeValue2000, na.rm=T ), col="orange", lwd=3 )
 ```
 
@@ -172,6 +174,7 @@ hist( df$MHV.Change.00.to.10/1000, breaks=500,
       xlab="Thousand of US Dollars (adjusted to 2010)", cex.lab=1.5,
       ylab="", main="Change in Median Home Value 2000 to 2010",
       col="gray20", border="white" )
+
 axis( side=1, at=seq( from=-100, to=500, by=100 ), 
       labels=paste0( "$", seq( from=-100, to=500, by=100 ), "k" ) )
         
@@ -180,6 +183,7 @@ abline( v=mean.x, col="darkorange", lwd=2, lty=2 )
 text( x=200, y=1500, 
       labels=paste0( "Mean = ", scales::dollar( round(1000*mean.x,0)) ), 
       col="darkorange", cex=1.8, pos=3 )
+
 median.x <- median( df$MHV.Change.00.to.10/1000, na.rm=T )
 abline( v=median.x, col="dodgerblue", lwd=2, lty=2 )
 text( x=200, y=2000, 
@@ -200,8 +204,10 @@ hist( df$MHV.Growth.00.to.12, breaks=5000,
       xlab="", cex.main=1.5,
       ylab="", main="Growth in Home Value by Census Tract 2000 to 2010",
       col="gray40", border="white" )
+
 axis( side=1, at=seq( from=-100, to=200, by=50 ), 
       labels=paste0( seq( from=-100, to=200, by=50 ), "%" ) )
+
 ymax <- max( hg$count )
         
 mean.x <- mean( df$MHV.Growth.00.to.12, na.rm=T )
@@ -209,6 +215,7 @@ abline( v=mean.x, col="darkorange", lwd=2, lty=2 )
 text( x=100, y=(0.5*ymax), 
       labels=paste0( "Mean = ", round(mean.x,0), "%"), 
       col="darkorange", cex=1.8, pos=4 )
+
 median.x <- median( df$MHV.Growth.00.to.12, na.rm=T )
 abline( v=median.x, col="dodgerblue", lwd=2, lty=2 )
 text( x=100, y=(0.6*ymax), 
@@ -241,7 +248,7 @@ From the website:
 
 *Through the first 15 application rounds of the NMTC Program, the CDFI Fund has made 1,178 awards, allocating a total of $57.5 billion in tax credit authority to CDEs through a competitive application process.* 
 
-[NMTC Press Release](https://github.com/DS4PS/cpp-528-spr-2020/blob/master/labs/data/raw/NMTC/2019%20NMTC%20Public%20Data%20Release_FY_17-comments%20incorporated_BL%20Edits%20incorporated_Final.pdf)
+[data download website](https://www.cdfifund.gov/news-events/news/Pages/news-detail.aspx?NewsID=364&Category=Press%20Releases)
 
 **About the LIHTC Program**
 
@@ -271,6 +278,7 @@ We can look at some descriptive statistics from 2000 to determine if we have an 
 gridExtra::grid.arrange( PLOTS$pov_rate_2000$nmtc, 
                          PLOTS$pov_rate_2000$lihtc, 
                          nrow = 1 )
+
 ```
 
 New Market Tax Credit recipients appear to be quite distinct, located in poorer tracts. We see the LIHTC projects tend to favor tracts with higher poverty than non-recipient tracts, but a large proportion of the projects are still located in tracts with low to moderate levels of poverty.
@@ -293,24 +301,30 @@ Here are some more summary statistics comparing the two:
 ```{r}
 ### HOUSEHOLD INCOME COMPARISONIN 2000:
 ### PROGRAM RECIPIENTS VS NON-RECIPIENT TRACTS
+
 # Tracts that received LIHTC
 mean( d$hinc00[ d$num.lihtc > 0 ] )
 # Tracts that did not 
 mean( d$hinc00[ d$num.lihtc == 0 ] )
+
 # Tracts that received NMTC
 mean( d$hinc00[ d$num.nmtc > 0 ] )
 # Tracts that did not 
 mean( d$hinc00[ d$num.nmtc == 0 ] )
+
+
 ```
 
 **Home Value 2000:**
 
 ```{r}
 ### MEDIAN HOME VALUE COMPARISON IN 2000
+
 # Tracts that received LIHTC
 mean( d$mhv.00[ d$num.lihtc > 0 ], na.rm=T )
 # Tracts that did not 
 mean( d$mhv.00[ d$num.lihtc == 0 ], na.rm=T )
+
 # Tracts that received NMTC
 mean( d$mhv.00[ d$num.nmtc > 0 ], na.rm=T )
 # Tracts that did not 
@@ -321,10 +335,12 @@ mean( d$mhv.00[ d$num.nmtc == 0 ], na.rm=T )
 
 ```{r}
 ### POVERTY RATE COMPARISONS
+
 # Tracts that received LIHTC
 summary( d$pov.rate.00[ d$num.lihtc > 0 ] )
 # Tracts that did not 
 summary( d$pov.rate.00[ d$num.lihtc == 0 ] )
+
 # Tracts that received NMTC
 summary( d$pov.rate.00[ d$num.nmtc > 0 ] )
 # Tracts that did not 
@@ -354,6 +370,7 @@ We can confirm these with some descriptive statistics of home value growth rates
 summary( d$growth[ d$num.lihtc > 0 ] )
 # Tracts that did not 
 summary( d$growth[ d$num.lihtc == 0 ] )
+
 # Tracts that received NMTC
 summary( d$growth[ d$num.nmtc > 0 ] )
 # Tracts that did not
@@ -450,12 +467,16 @@ We can see this by looking at the exponential growth of two investments, one for
 ```{r}
 stock1 <- 1000
 stock2 <- 100
+
 rate.of.return <- ( (1.1)^(1:10) )
+
 roi.1 <- stock1*rate.of.return
 roi.2 <- stock2*rate.of.return 
+
 plot( 1:10, roi.1, type="b", pch=19, bty="n",
       xlab="Time", ylab="Stock Value", ylim=c(0,2600) )
 points( 1:10, roi.2, type="b", pch=19 )
+
 text( 5, roi.1[5]+100, "Stock 1", pos=3, cex=1.5 )
 text( 5, roi.2[5]+100, "Stock 2", pos=3, cex=1.5 )
 ```
@@ -475,9 +496,11 @@ This log-linear model will turn slopes in the previous model to growth rates:
 ```{r}
 log.roi.1 <- log( roi.1 )
 log.roi.2 <- log( roi.2 )
+
 plot( 1:10, log.roi.1, type="b", pch=19, bty="n",
       xlab="Time", ylab="Stock Value", ylim=c(0,8) )
 points( 1:10, log.roi.2, type="b", pch=19 )
+
 text( 5, log.roi.1[5], "Stock 1", pos=3, cex=1.5 )
 text( 5, log.roi.2[5], "Stock 2", pos=3, cex=1.5 )
 ```
@@ -489,14 +512,19 @@ We can approximate the growth rate between two periods by looking at the differe
 
 ```{r}
 data.frame( time=1:10, value=roi.1, log.value=log.roi.1 ) %>% pander::pander()
+
 y1 <- roi.1[1]
 y2 <- roi.1[2]
+
 # true growth rate
 ( y2 - y1 ) / y1
+
 log.y1 <- log.roi.1[1]
 log.y2 <- log.roi.1[2]
+
 # growth rate approximation
 log.y2 - log.y1
+
 ```
 
 So back to the home value problem. A is worth \$200k and B \$100k. They both grow at the same rate. Home A increases in value by \$20k, and home B by \$10k. 
@@ -525,10 +553,12 @@ The important coefficient, B3, would then represent the growth rate of the treat
 # create the difference in difference model
 # note: treat = B1, post = B2, treat*post = B3
 m <- lm( y ~ treat + post + treat*post, data=d3 )
+
 # display model results
 stargazer::stargazer(m,
                      type = S_TYPE,
                      digits = 2)
+
 ```
 
 In this case then, b2 represents the secular trend (23% growth). 
@@ -542,6 +572,7 @@ b0 <- m$coefficients[1]
 b1 <- m$coefficients[2]
 b2 <- m$coefficients[3]
 b3 <- m$coefficients[4]
+
 # C1 = B0  
 exp( b0 )
 # C2 = B0 + B2 
@@ -568,3 +599,4 @@ blockquote {
 }
 
 </style>
+
