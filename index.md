@@ -41,7 +41,7 @@ textbooks:
 - title: R Cookbook. Proven recipes
   authors: Paul Teetor
   edition: 2015
-  link: http://www.bagualu.net/wordpress/wp-content/uploads/2015/10/R_Cookbook.pdf
+  link: https://rc2e.com/
   required: Not Required
 - title: R for Data Science
   authors: Wickham, H., & Grolemund, G.
