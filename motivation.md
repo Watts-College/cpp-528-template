@@ -78,6 +78,21 @@ From: Brown, A. W., Kaiser, K. A., & Allison, D. B. (2018). Issues with data and
 <hr>
 
 
+## Quality Control as a New Paradigm
+
+From: * Samuel, S., "Lots of bad science still gets published. Here’s how we can change that." Vox, Dec 6, 2022.*  
+  
+**The Transparent Replications Project:**
+  
+*Whenever a new psychology paper or behavior paper comes out in Nature and Science, as long as they are within our technical and monetary constraints, we will replicate them. So imagine you’re submitting your paper and you’re like, “Oh, wait a minute, I’m going to get replicated if this gets published!” That actually makes a really big difference. Right now the chance of being replicated is so low that you basically just ignore it.*
+  
+Traditionally science has advanced through peer review of manuscripts that describe a research question, the methods of inquery, and results. The **quality of research** would be determined by a journal's assessment of the robustness of the research design, alignment of results with existing theory, and practical significance of the findings. During peer review scientists have typically been challenged on things like data quality and model specification, but it was generally assumed that their executive of experiments or studies could be trusted. As the complexity of data, programming, and analysis has increased over time scientists are now being asked to make the whole process transparent by submitting code and data as part of the peer review process in addition to the manuscript. This shift in norms will have two big impacts on the way modern research is conducted. 
+  
+(1) Data and code must be well-organized and well-documented in order for it to be inspected and reviewed. 
+  
+(2) Since errors in code are more likely to be discovered through replication they will have higher reputational costs. As a result, research teams are embracing internal quality control processes like code inspection (at least two people on the team have reviewed the work) and unit testing. 
+  
+Whereas peer review has been the primary quality control mechanism for almost two centuries modern data analysts are expected to understand project management tools that integrate quality control into the research process directly. 
 
 
 ## Best Practices for Coding in the Social Sciences
