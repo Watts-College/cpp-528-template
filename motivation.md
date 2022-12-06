@@ -32,7 +32,7 @@ When project management is not effectively deployed consequences can be dire:
 From: “The “Gold Standard” for Data Science Project Management”
 
 <hr>
-
+<br>
 
 ## Errors in Data Programming
 
@@ -64,7 +64,6 @@ From: Brown, A. W., Kaiser, K. A., & Allison, D. B. (2018). Issues with data and
 *Errors in long-term data storage and sharing can render findings non-confirmable because data are not available to be reanalyzed. Many meta-analysts, including us, have attempted to obtain additional information about a study, but have been unable to because the authors gave no response, could not find data, or were unsure how they calculated their original results. We asked authors once to share data from a publication with implausible baseline imbalances and other potential statistical anomalies; they were unable to produce the data, and the journal retracted the paper (26). We have struggled on occasion to find our own raw data from older studies and welcome advances in data management, data repositories, and data transparency.*
 
 <hr>
-
 <br>
 
 ## Replication Crisis in Psychology. 
@@ -80,7 +79,7 @@ In Wikipedia, The Free Encyclopedia. Retrieved 05:43, March 15, 2020.
 *Thirdly, several effects in psychological science have been found to be difficult to replicate even before the current replication crisis. For example, the scientific journal Judgment and Decision Making has published several studies over the years that fail to provide support for the unconscious thought theory. Replications appear particularly difficult when research trials are pre-registered and conducted by research groups not highly invested in the theory under questioning.*
 
 <hr>
-
+<br>
 
 ## Quality Control as a New Paradigm
 
