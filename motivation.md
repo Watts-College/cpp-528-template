@@ -82,7 +82,7 @@ From: Brown, A. W., Kaiser, K. A., & Allison, D. B. (2018). Issues with data and
 
 ## Quality Control as a New Paradigm
 
-From: * Samuel, S., "Lots of bad science still gets published. Here’s how we can change that." Vox, Dec 6, 2022.*  
+From: * Samuel, S., "Lots of bad science still gets published. Here’s how we can change that." Vox, Dec 6, 2022.*  [PDF](https://github.com/Watts-College/cpp-528-template/raw/main/articles/science-get-a-new-way-to-detect-bad-research-vox.pdf)
   
 **The Transparent Replications Project:**
   
