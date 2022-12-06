@@ -50,6 +50,8 @@ If you think about your high school math assignments, if you got 19 out of 20 qu
 
 The nice thing about mathematical models is that they are easy to communicate in a parsimonious fashion, and issues can often be spotted in statistical models through inconsistencies in commonly-reported descriptive statistics. Data errors, on the other hand, are much harder to detect because data preparation is rarely described in detail and computing errors are not described because authors do not know they exist! More errors likely occur while preparing data for analysis instead of during the analysis. 
 
+<hr>
+<br>
 
 ## Errors in Data Preparation
 
@@ -94,7 +96,9 @@ Traditionally science has advanced through peer review of manuscripts that descr
   
 Whereas peer review has been the primary quality control mechanism for almost two centuries modern data analysts are expected to understand project management tools that integrate quality control into the research process directly. 
 
-
+<hr>
+<br>
+  
 ## Best Practices for Coding in the Social Sciences
 
 From: *Gentzkow, M., & Shapiro, J. M. (2014). Code and data for the social sciences: A practitioner’s guide. Chicago, IL: University of Chicago.*
