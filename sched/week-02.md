@@ -120,32 +120,32 @@ The videos are presented in the order that they should be watched:
 
 ##### Intro to WK02 Concepts
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FQpA2-lzNus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OqbMHyTWsIY?si=6ozoHiFaonqb9g_a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ##### Intro to Portability & RStudio Projects
 Lecture:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hAA9K4RYjhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vn7UiKFBZgE?si=nhW3tf4WcJChXEG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Tutorial:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A5W8mQf8ej8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_lI5GWbI8MY?si=2DSZjYTOBGwbDkrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ##### `renv` package
 
 Lecture:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_VmpLMuxv14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qb3xnBzWTpg?si=qGIH2YX-y5yMuFWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Tutorial:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y_2PovxwUQc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NfyHH9ltkgM?si=_Oqu1K8YcWjtwPKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ##### `.gitignore` file
 
 Lecture:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4ee7a3qAYKE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uv_-jJQlEUo?si=KLtOwqUEaDlxRqaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Tutorial:
 
