@@ -51,7 +51,7 @@ You can think about the final deliverable as sections in a report. The table of 
 3. Results and Conclusion
     + Detailed summary of findings on the effectiveness of tax credit programs across divisions
     + Detailed summary of changes in social vulnerability over time across divisions
-    + Conclusion/suggestions fo future research
+    + Conclusion/suggestions for future research
 4. Team About Us Page
     + Brief bios of each team member
 5. References
@@ -79,7 +79,7 @@ You will create an `index.md` file to serve as the landing page for the report, 
 * Website is active and live
     + All links work properly
 * GitHub pages template is clean and effective
-    + Custom CSS used for consistent report style
+    + If custom CSS is used, it should be a consistent report style, templates will also be provided that do not need custom CSS 
 * Landing page includes:
     + a table of contents
     + a link to files on the GitHub repo with description of content
@@ -391,7 +391,7 @@ You do not have to follow an exact R coding style guide, but you may find it hel
 
     
 ### License [5 points, GROUP SCORE]
-* Select an appropriate open-source license for the project and include it in the repository. The MIT License is popular, but feel free to select whichever works best for your team
+* Select an appropriate open-source license for the project and include it in the repository. The MIT License is popular, but feel free to select whichever works best for your team.
 * Add a `LICENSE` file on GitHub and include the appropriate licensing info
 
 
