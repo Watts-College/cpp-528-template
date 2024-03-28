@@ -47,6 +47,9 @@ These GitHub repositories provide a few examples of work that is designed to be 
 - [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
 - [Traffic Stops Across Connecticut](http://trafficstops.trendct.org/data/)
 
+Resources to help make projects reproducible from the Urban Institute: 
+
+- [Reproducibility at Urban](https://ui-research.github.io/reproducibility-at-urban/)
 
 <br>
 <br>
