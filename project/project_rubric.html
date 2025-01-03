@@ -7,7 +7,7 @@
 
         <meta name="author" content="Cristian E. Nuno &amp; Courtney Stowers" />
     
-        <meta name="date" content="2024-03-06" />
+        <meta name="date" content="2025-01-03" />
     
     <title>Project Rubric</title>
 
@@ -1842,8 +1842,8 @@ margin-left: 0 !important;
            <span class="glyphicon glyphicon-user"></span> Cristian E.
 Nuno &amp; Courtney Stowers
       </p>
-         <p class="date"><span class="glyphicon glyphicon-calendar"></span> March
-06, 2024</p>
+         <p class="date"><span class="glyphicon glyphicon-calendar"></span> January
+03, 2025</p>
            
 
    
@@ -2033,8 +2033,8 @@ package.</li>
 </ul></li>
 </ul>
 </div>
-<div id="portability-10-points-group-score" class="section level3">
-<h3>Portability [10 points, GROUP SCORE]</h3>
+<div id="port-renv" class="section level3">
+<h3>Portability &amp; renv [10 points, GROUP SCORE]</h3>
 <ul>
 <li>Can anyone run project code on their computer without having to
 change working directories or other settings?</li>
@@ -2045,6 +2045,11 @@ avoid those issues.</li>
 analysis
 <ul>
 <li>Usage of <code>renv</code> package satisfies this requirement</li>
+<li>1 (one) student should upload their <strong>final</strong> version
+of the <code>renv.lock</code> file that stores all packages and
+dependencies. To do this, upload directly on GitHub.com since the file
+will be ignored by GitHub Desktop per the .gitignore to avoid conflicts
+between students.</li>
 </ul></li>
 </ul>
 </div>
@@ -2134,6 +2139,7 @@ folders should have the census divisions that you select):</p>
 │   └── images
 │       └── README.md
 ├── &lt;RStudio Project Label&gt;.Rproj
+├── renv.lock
 ├── imgs
 │   ├── README.md
 ├── resources
@@ -2346,17 +2352,28 @@ of the file into a script.</p>
 <h2>DOCUMENTATION [Total 25 points, GROUP &amp; INDIVIDUAL SCORES]</h2>
 <div id="readme-files-10-points-group-score" class="section level3">
 <h3>README Files [10 points, GROUP SCORE]</h3>
-<p>Main <code>README.md</code> in the repository: * Overview of the
-project and the code * Links to appropriate pages in the report * Be
-kind and include convenient code to install all packages you use in the
-report + Since you’re using <code>renv</code> package, you should have a
-<code>renv.lock</code> file that stores your packages and their
-dependencies. Therefore, just make sure you explictly state that the
-reader has to use <code>renv::restore()</code> to download the specific
-versions of the packages used in your project. + Only one line of code
-but it is powerful! * Contact information for people that will be
-maintaining the project. At most, ASU emails; at minimum, links to your
-personal GitHub pages.</p>
+<p>Main <code>README.md</code> in the repository:</p>
+<ul>
+<li>Overview of the project and the code</li>
+<li>Links to appropriate pages in the report</li>
+<li>Be kind and include convenient code to install all packages you use
+in the report
+<ul>
+<li>Since you’re using <code>renv</code> package, you should have a
+renv.lock file that stores your packages and their dependencies (see
+<strong><a href="#port-renv">portability &amp; renv</a></strong> section
+above).</li>
+<li>Once the final renv.lock is uploaded, just make sure that your team
+explicitly states that the reader of the report has to use
+<code>renv::restore()</code> to download the specific versions of the
+packages used in your project.</li>
+<li><code>renv::restore()</code> is only one line of code but it is
+powerful!</li>
+</ul></li>
+<li>Contact information for people that will be maintaining the project.
+At most, ASU emails; at minimum, links to your personal GitHub
+pages.</li>
+</ul>
 <p>Sub-folder <code>README.md</code> files: + Should explain the purpose
 and organization of the directory + Include instructions for using the
 files in the folder</p>

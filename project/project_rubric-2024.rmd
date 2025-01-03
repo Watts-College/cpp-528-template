@@ -1,0 +1,398 @@
+---
+title: "Project Rubric"
+author: "Cristian E. Nuno & Courtney Stowers"
+date: '`r format(Sys.time(), "%B %d, %Y")`'
+# date: March 06, 2024
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+---
+
+# CPP 528/PAF 515 – Group Project Instructions
+
+## Overview
+
+The project for this course is designed as an opportunity to practice project management skills by showing your research on a static website hosted on GitHub Pages. Overall, this project is worth 100 points and makes up the bulk of your final grade.
+
+
+It is broken into six steps, leaving one week at the end of the semester for a final round of revisions, documenting the process, and house-cleaning in your GitHub repo.
+
+* Week 01: Introduction to reproducible data science project management
+* Week 02: Introduction to reproducible data management
+* Week 03: Infographics and interactive mapping tools for data presentation
+* Week 04: Introduction to Tax Credits Data and methods to visualize the intervention
+* Week 05: Introduction to diff-in-diff models and evaluation of intervention
+* Week 06: Summarize project findings and begin working on project website
+* Week 07: Finalize project website and project requirements
+
+Each week you will work on one step of the analysis as a lab. These labs should be completed and submitted individually (you are allowed to collaborate on labs but you must submit your labs individually and complete your labs on your selected Census Division). 
+
+As a team, you'll collaborate to synthesize the work from each other into one concrete project. Together, you will primarily focus on the integration of content into a static website which makes all of the steps in your research transparent and easily reproducible.
+
+
+## Table of Contents
+You can think about the final deliverable as sections in a report. The table of contents will be as follows: 
+
+1. Executive Summary (4-6 sentences in each section)
+    + Overview (Details on Tax Credit Programs, purpose of the evaluation, and hypothesis)
+    + Data (Description of data sources used in project)
+    + Methods (Description of statistical and data analytics methods used throughout the course)
+    + Results (Findings on whether the tax credits were effective overall)
+
+2. Division-specific reports
+    + Overview of specific social vulnerabilities in Census Division
+    + Infographics and Maps of socially vulnerable areas in Census Division
+    + Visualization of distribution of tax credits in division and correlation to social vulnerability
+    + Measuring intervention and evaluating effectiveness of tax credits with diff-in-diff models 
+    + Summary of results/findings
+3. Results and Conclusion
+    + Detailed summary of findings on the effectiveness of tax credit programs across divisions
+    + Detailed summary of changes in social vulnerability over time across divisions
+    + Conclusion/suggestions for future research
+4. Team About Us Page
+    + Brief bios of each team member
+5. References
+    + List of all articles/resources cited throughout the report. Can be in any citation style.
+
+Note that the Executive Summary, Results and Conclusion, and Division-Specific Summary pages will require a succinct written narrative for context. However, most of the sections will focus on describing the methodology to the audience and walking them through the process of generating results. These chapters will have more of a tutorial or code- through feel than a final report tone. The goal of those sections is to make the methodology as transparent as possible and to make it easy for others to reproduce the work and extend it.
+
+# Grading Rubric
+
+Your grade will largely be based upon your demonstration of mastery of project management principles and your ability to implement the project steps.
+
+Your deliverable will be a report packaged as a static website hosted on GitHub Pages (just like this course website), and all of the components necessary to replicate results (data, code, documentation of packages, etc).
+
+You will be allocated points based upon your individual and group performance on the following criteria:
+
+
+## FINAL DELIVERABLES [Total 50 points, GROUP & INDIVIDUAL SCORES]
+
+### Project Website hosted on GitHub Pages [15 points, GROUP SCORE]
+
+You will create an `index.md` file to serve as the landing page for the report, and link to report chapters from that document. Individual chapters should be stored as separate `RMD` files (rendered as `HTML` files for the report). You can link to rendered `HTML` files by referencing them in the proper sub-directories:
+
+* http://site-url.com (will load the index file)
+* http://site-url/analysis/file-name.html (file in `analysis/` sub-directory)
+* Website is active and live
+    + All links work properly
+* GitHub pages template is clean and effective
+    + If custom CSS is used, it should be a consistent report style, templates will also be provided that do not need custom CSS 
+* Landing page includes:
+    + a table of contents
+    + a link to files on the GitHub repo with description of content
+    + replication instructions (software needed, how to access files, etc) 
+    + [license info](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository)
+* About Us page 
+
+### Data [10 points, INDIVIDUAL SCORE]
+
+* Original data sources are documented and data is saved to the appropriate folder for your Census Division
+* Data steps clearly walk through the process of creating new variables, cleaning data, and joining tables.
+    + These steps should exist in a standalone `project_data_steps.R` script for your Census Division that hosts all of these steps and produces `.rds` files that store data used throughout your project. 
+    + This allows you to avoid copying and pasting the same cleaning code while holding one file as the source of truth for your data cleaning
+
+### Analysis [15 points, INDIVIDUAL SCORE]
+* Quality of models and presentation of the steps to produce results for your Census Division: 
+    + Data visualizations are easy to understand
+    + Clear description and analysis of data sources (CDC SVI, NMTC, & LIHTC)
+    + Clear presentation of diff-in-diff models
+* Project Data Steps file is saved in GitHub repository
+* All results are easily reproducible
+    + Packages and versions reported courtesy of the [`renv`](https://rstudio.github.io/renv/articles/renv.html) package.
+    + Clear description of which data is used throughout
+        + Appropriate references to detailed data step files when helpful
+    + Functions and arguments are explained when they are not clear
+        + Specialized packages or functions
+        + Custom functions
+
+### Portability [10 points, GROUP SCORE]
+
+* Can anyone run project code on their computer without having to change working directories or other settings?
+* Note that Windows and Mac use different styles for paths (forward vs backwards slash) so functions like [`here::here()`](https://here.r-lib.org/) can help avoid those issues.
+* Report the R environment and package versions used to create the analysis
+    + Usage of `renv` package satisfies this requirement
+
+## TEAM PROCESS [10 points, GROUP SCORE]
+
+* Utilization of Kanban Boards
+    + When used correctly, a manager should never have to ask for a progress report. The Kanban board should show exactly what people are working on at the current moment, and progress thus far on the project.
+    + Project broken into appropriate-sized steps (cards)
+    + Steps broken into task lists
+    + Each card is assigned to at least one team member
+    + Card status is updated weekly
+
+* GitHub Commits
+    + Commits have useful names and clear descriptions 
+        + Good example: `'Create .rds file that stores original and final predictive model'`
+        + Bad example: `'Updated files'`
+        + In general, good commits start with a present tense verb that summarizes your work in 50 character or less. If I can't tell exactly what change/edit was made, neither will you six months from now.
+* Code Review
+    + Each member has managed the code review process at least twice, once as a reviewer and once as someone asking for a review.
+* `.gitignore` files and Secret Passwords
+    + Add file names and file types to the `.gitignore` file to prevent them from syncing to the team repository
+        + Use the [R specific `.gitignore` file](https://github.com/github/gitignore/blob/master/R.gitignore) courtesy of GitHub
+    + Never store passwords on GitHub. If you don't know if you are about to send confidential information - or if you have - reach out immediately.
+        + Place passwords (or API keys) as character vectors (i.e. `my_api_key = 'abc123'` into a file called `password.R`. When you need that password in your `.r` or `.rmd` file, obtain safely by calling `source(here::here("password.R")`.
+        + Add the file `password.R` to your `.gitignore`. That means you can all keep separate passwords in a file with the same name on your own computers, and the code will run fine on each person’s machine.
+        
+## PROJECT ORGANIZATION [Total 15 points, GROUP SCORE]
+The ideal directory structure makes it possible for a random stranger to find files easily, even if they have never seen your project before. The “stranger” is most likely you six months from now when you are trying to find code that you want to re-use or update your project and you have no recollection which files are the final working versions and which of the 100 datasets you created are used in the final program.
+
+### Uniform directory structure
+
+Every team's directory structure should look something like this (recall Minnie, Mickey, Nala, and Sparky are our 
+friends from Lab-01 and they've listed their respective selected Census Divisions, your team's folders should
+have the census divisions that you select):
+
+```bash
+. (root/main/project directory, such as Watts-College/paf-515-spr-1946-group-01)
+├── README.md
+├── analysis
+│   ├── README.md
+│   ├── project_data_steps_minnie.R
+│   ├── project_data_steps_mickey.R  
+│   ├── project_data_steps_nala.R  
+│   └──project_data_steps_sparky.R 
+├── assets
+│   ├── README.md
+│   ├── css
+│   │   └── README.md
+│   └── images
+│       └── README.md
+├── <RStudio Project Label>.Rproj
+├── imgs
+│   ├── README.md
+├── resources
+│   ├── README.md
+├── data
+│   ├── README.md
+│   ├── raw
+|   │   ├── Census_Data_SVI
+│   |   |   ├── README.md
+│   |   |   ├── Census_2010_Geography_Notes.pdf
+│   |   |   ├── census_data_svi_2010_variables.txt
+│   |   |   ├── census_data_svi_2020_variables.txt
+│   |   |   ├── census_regions.xlsx
+│   |   |   ├── svi_2010_trt10.rds
+│   │   |   └── svi_2020_trt10.rds
+|   │   └── NMTC_LIHTC_tracts
+│   |       ├── README.md
+│   |       ├── nmtc_2011-2015_lic_110217.xlsx
+│   |       ├── NMTC_Public_Data_Release_includes_FY_2021_Data_final.xlsx
+│   |       ├── qct_data_2010_2011_2012.xlsx
+│   |       ├── lihtcpub.zip
+│   |       ├── lihtcpub
+|   |           ├──LIHTCPUB.csv
+|   |           └──LIHTC Data Dictionary 2021.pdf
+│   ├── wrangling
+│   │   ├── README.md
+│   │   ├── South_Atlantic_Division_county_svi_flags10.rds
+│   │   ├── South_Atlantic_Division_county_svi_flags20.rds
+│   │   ├── South_Atlantic_Division_st_sf.rds
+│   │   ├── South_Atlantic_Division_svi_divisional_lihtc.rds
+│   │   ├── South_Atlantic_Division_svi_divisional_nmtc.rds
+│   │   ├── South_Atlantic_Division_svi_national_lihtc.rds
+│   │   ├── South_Atlantic_Division_svi_national_nmtc.rds
+│   │   ├── Pacific_Division_county_svi_flags10.rds
+│   │   ├── Pacific_Division_county_svi_flags20.rds
+│   │   ├── Pacific_Division_st_sf.rds
+│   │   ├── Pacific_Division_svi_divisional_lihtc.rds
+│   │   ├── Pacific_Division_svi_divisional_nmtc.rds
+│   │   ├── Pacific_Division_svi_national_lihtc.rds
+│   │   ├── Pacific_Division_svi_national_nmtc.rds
+│   │   ├── West_South_Central_Division_county_svi_flags10.rds
+│   │   ├── West_South_Central_Division_county_svi_flags20.rds
+│   │   ├── West_South_Central_Division_st_sf.rds
+│   │   ├── West_South_Central_Division_svi_divisional_lihtc.rds
+│   │   ├── West_South_Central_Division_svi_divisional_nmtc.rds
+│   │   ├── West_South_Central_Division_svi_national_lihtc.rds
+│   │   ├── West_South_Central_Division_svi_national_nmtc.rds
+│   │   ├── Mountain_Division_county_svi_flags10.rds
+│   │   ├── Mountain_Division_county_svi_flags20.rds
+│   │   ├── Mountain_Division_st_sf.rds
+│   │   ├── Mountain_Division_svi_divisional_lihtc.rds
+│   │   ├── Mountain_Division_svi_divisional_nmtc.rds
+│   │   ├── Mountain_Division_svi_national_lihtc.rds
+│   │   └── Mountain_Division_svi_national_nmtc.rds
+│   └── rodeo
+│   │   ├── README.md
+│   │   ├── South_Atlantic_Division_svi_divisional_lihtc.rds
+│   │   ├── South_Atlantic_Division_svi_divisional_nmtc.rds
+│   │   ├── South_Atlantic_Division_svi_national_lihtc.rds
+│   │   ├── South_Atlantic_Division_svi_national_nmtc.rds
+│   │   ├── Pacific_Division_svi_divisional_lihtc.rds
+│   │   ├── Pacific_Division_svi_divisional_nmtc.rds
+│   │   ├── Pacific_Division_svi_national_lihtc.rds
+│   │   ├── Pacific_Division_svi_national_nmtc.rds
+│   │   ├── West_South_Central_Division_svi_divisional_lihtc.rds
+│   │   ├── West_South_Central_Division_svi_divisional_nmtc.rds
+│   │   ├── West_South_Central_Division_svi_national_lihtc.rds
+│   │   ├── West_South_Central_Division_svi_national_nmtc.rds
+│   │   ├── Mountain_Division_svi_divisional_lihtc.rds
+│   │   ├── Mountain_Division_svi_divisional_nmtc.rds
+│   │   ├── Mountain_Division_svi_national_lihtc.rds
+│   │   └── Mountain_Division_svi_national_nmtc.rds
+├── labs
+│   ├── README.md
+│   ├── wk01
+│   |     ├── imgs
+|   |         └──any image files from the lab 
+│   │     └── README.md
+│   │     └── lab01_sparky.rmd
+│   │     └── lab01_sparky.md
+│   │     └── lab01_sparky.html
+│   │     └── lab01_mickey.rmd
+│   │     └── lab01_mickey.md
+│   │     └── lab01_mickey.html
+│   │     └── lab01_minnie.rmd
+│   │     └── lab01_minnie.md
+│   │     └── lab01_minnie.html
+│   │     └── lab01_nala.rmd
+│   │     └── lab01_nala.md
+│   │     └── lab01_nala.html
+│   ├── wk02
+│   |     ├── imgs
+|   |         └──any image files from the lab
+│   │     └── README.md
+│   │     └── lab02_sparky.rmd
+│   │     └── lab02_sparky.md
+│   │     └── lab02_sparky.html
+│   │     └── lab02_mickey.rmd
+│   │     └── lab02_mickey.md
+│   │     └── lab02_mickey.html
+│   │     └── lab02_minnie.rmd
+│   │     └── lab02_minnie.md
+│   │     └── lab02_minnie.html
+│   │     └── lab02_nala.rmd
+│   │     └── lab02_nala.md
+│   │     └── lab02_nala.html
+│   ├── wk03
+│   |     ├── imgs
+|   |         └──any image files from the lab
+│   │     └── README.md
+│   │     └── lab03_sparky.rmd
+│   │     └── lab03_sparky.md
+│   │     └── lab03_sparky.html
+│   │     └── lab03_mickey.rmd
+│   │     └── lab03_mickey.md
+│   │     └── lab03_mickey.html
+│   │     └── lab03_minnie.rmd
+│   │     └── lab03_minnie.md
+│   │     └── lab03_minnie.html
+│   │     └── lab03_nala.rmd
+│   │     └── lab03_nala.md
+│   │     └── lab03_nala.html
+│   ├── wk04
+│   |     ├── imgs
+|   |         └──any image files from the lab
+│   │     └── README.md
+│   │     └── lab04_sparky.rmd
+│   │     └── lab04_sparky.md
+│   │     └── lab04_sparky.html
+│   │     └── lab04_mickey.rmd
+│   │     └── lab04_mickey.md
+│   │     └── lab04_mickey.html
+│   │     └── lab04_minnie.rmd
+│   │     └── lab04_minnie.md
+│   │     └── lab04_minnie.html
+│   │     └── lab04_nala.rmd
+│   │     └── lab04_nala.md
+│   │     └── lab04_nala.html
+│   ├── wk05
+│   |     ├── imgs
+|   |         └──any image files from the lab
+│   │     └── README.md
+│   │     └── lab05_sparky.rmd
+│   │     └── lab05_sparky.md
+│   │     └── lab05_sparky.html
+│   │     └── lab05_mickey.rmd
+│   │     └── lab05_mickey.md
+│   │     └── lab05_mickey.html
+│   │     └── lab05_minnie.rmd
+│   │     └── lab05_minnie.md
+│   │     └── lab05_minnie.html
+│   │     └── lab05_nala.rmd
+│   │     └── lab05_nala.md
+│   │     └── lab05_nala.html
+│   ├── wk06
+│   |     ├── imgs
+|   |         └──any image files from the lab
+│   │     └── README.md
+│   │     └── lab06_sparky.rmd
+│   │     └── lab06_sparky.md
+│   │     └── lab06_sparky.html
+│   │     └── lab06_mickey.rmd
+│   │     └── lab06_mickey.md
+│   │     └── lab06_mickey.html
+│   │     └── lab06_minnie.rmd
+│   │     └── lab06_minnie.md
+│   │     └── lab06_minnie.html
+│   │     └── lab06_nala.rmd
+│   │     └── lab06_nala.md
+│   │     └── lab06_nala.html
+│   └── wk07
+│       └── README.md
+│       └── If any final revisions/files are needed they can be stored here
+
+```
+
+When creating files/folders, here are some helpful guidelines:
+
+* Never capitalize unless necessary or helpful for emphasis
+* Use an underscore (`_`) instead of a space in file and folder names since spaces can cause a lot of problems in paths and are usually replaced with arbitrary characters.
+* Try to have short but meaningful file names that are memorable
+* Add a `README.md` file inside of each folder with, at minimum, a one-sentence description of the directory.
+* If files need to run in a specific order, or they represent things like chapters of a book, consider naming them something like step_01, step_02, etc.
+* File names:
+    + Consistent naming throughout project, including rules for capitalization and dates
+    + When order matters (for example steps in analysis or chapters of a report) the file order matches order in which they should be run
+    + Effective use of leading zeros to maintain proper file order (09, 10, 11, ... )
+* Clear system to keep track of the current version and archive revisions
+
+It is helpful to have only the current version of a file in the project directory, and move all old versions to an `old-files/` or `archive/` folder if you need to reference them. If you have multiple versions of the same file in your project folder there is a high probability that one team member accidentally uses the wrong version (especially if they have not synced their project directory). It also prevents you from reading old versions of the file into a script.
+
+## DOCUMENTATION [Total 25 points, GROUP & INDIVIDUAL SCORES]
+
+### README Files [10 points, GROUP SCORE]
+
+Main `README.md` in the repository:
+* Overview of the project and the code
+* Links to appropriate pages in the report
+* Be kind and include convenient code to install all packages you use in the report
+    + Since you're using `renv` package, you should have a `renv.lock` file that stores your packages and their dependencies. Therefore, just make sure you explictly state that the reader has to use `renv::restore()` to download the specific versions of the packages used in your project.
+    + Only one line of code but it is powerful!
+* Contact information for people that will be maintaining the project. At most, ASU emails; at minimum, links to your personal GitHub pages.
+
+Sub-folder `README.md` files:
+    + Should explain the purpose and organization of the directory
+    + Include instructions for using the files in the folder
+
+### Readable Code [5 points, INDIVIDUAL SCORE]
+
+* Your division's code should follow a uniform coding style
+    + Clean and consistent feel
+    + Indents used to group code appropriately
+* Objects follow consistent naming conventions
+    + Data sets are nouns, functions are verbs
+* Code is commented appropriately throughout the files
+
+You do not have to follow an exact R coding style guide, but you may find it helpful to review the following:
+
+- Tidyverse Style Guide: [https://style.tidyverse.org/](https://style.tidyverse.org/)
+- Google R Style Guide: [https://web.stanford.edu/class/cs109l/unrestricted/resources/google-style.html](https://web.stanford.edu/class/cs109l/unrestricted/resources/google-style.html)
+
+### Citations [5 points, INDIVIDUAL SCORE]
+
+* All sources are appropriately cited for your Census Division's summary, these should then be incorporated in the group summary
+* Feel free to use any academic citation style (See ASU Library's Citation LibGuide [https://libguides.asu.edu/citing](https://libguides.asu.edu/citing)) or R's citation/bibliography abilities (See RStudio's citation resource guide [https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#Bibliographies](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#Bibliographies))
+
+    
+### License [5 points, GROUP SCORE]
+* Select an appropriate open-source license for the project and include it in the repository. The MIT License is popular, but feel free to select whichever works best for your team.
+* Add a `LICENSE` file on GitHub and include the appropriate licensing info
+
+
